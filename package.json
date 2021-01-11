@@ -1,7 +1,8 @@
 {
-  "name": "ethjs-rpc",
+  "name": "vapjs-rpc",
+  "namespace": "vapjs",
   "version": "0.2.0",
-  "description": "A super simple module for querying the Ethereum RPC layer without formatting.",
+  "description": "A super simple module for querying the Vapory RPC layer without formatting.",
   "main": "lib/index.js",
   "files": [
     "dist",
@@ -32,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ethjs/ethjs-rpc.git"
+    "url": "git+ssh://git@github.com/vapjs/vapjs-rpc.git"
   },
   "keywords": [
-    "ethereum",
+    "vapory",
     "query",
     "rpc",
     "web3"
@@ -47,9 +48,9 @@
   "author": "Nick Dodson <nick.dodson@consensys.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethjs/ethjs-rpc/issues"
+    "url": "https://github.com/vapjs/vapjs-rpc/issues"
   },
-  "homepage": "https://github.com/ethjs/ethjs-rpc#readme",
+  "homepage": "https://github.com/vapjs/vapjs-rpc#readme",
   "babel": {
     "plugins": [
       [
@@ -157,10 +158,10 @@
     "eslint-plugin-import": "1.8.0",
     "eslint-plugin-jsx-a11y": "1.2.0",
     "eslint-plugin-react": "5.1.1",
-    "ethereumjs-testrpc": "3.0.2",
-    "ethjs-abi": "0.0.1",
-    "ethjs-format": "0.1.8",
-    "ethjs-provider-http": "*",
+    "vaporyjs-testrpc": "3.0.2",
+    "vapjs-abi": "0.0.1",
+    "vapjs-format": "0.1.8",
+    "vapjs-provider-http": "*",
     "istanbul": "0.4.5",
     "json-loader": "0.5.4",
     "lint-staged": "1.0.1",

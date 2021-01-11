@@ -3,11 +3,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("EthRPC", [], factory);
+		define("VapRPC", [], factory);
 	else if(typeof exports === 'object')
-		exports["EthRPC"] = factory();
+		exports["VapRPC"] = factory();
 	else
-		root["EthRPC"] = factory();
+		root["VapRPC"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -181,22 +181,22 @@ module.exports = function (promise) {
 
 var promiseToCallback = __webpack_require__(1);
 
-module.exports = EthRPC;
+module.exports = VapRPC;
 
 /**
- * Constructs the EthRPC instance
+ * Constructs the VapRPC instance
  *
- * @method EthRPC
- * @param {Object} cprovider the eth rpc provider web3 standard..
+ * @method VapRPC
+ * @param {Object} cprovider the vap rpc provider web3 standard..
  * @param {Object} options the options, if any
- * @returns {Object} ethrpc instance
+ * @returns {Object} vaprpc instance
  */
-function EthRPC(cprovider, options) {
+function VapRPC(cprovider, options) {
   var self = this;
   var optionsObject = options || {};
 
-  if (!(this instanceof EthRPC)) {
-    throw new Error('[ethjs-rpc] the EthRPC object requires the "new" flag in order to function normally (i.e. `const eth = new EthRPC(provider);`).');
+  if (!(this instanceof VapRPC)) {
+    throw new Error('[vapjs-rpc] the VapRPC object requires the "new" flag in order to function normally (i.e. `const vap = new VapRPC(provider);`).');
   }
 
   self.options = Object.assign({
@@ -206,7 +206,7 @@ function EthRPC(cprovider, options) {
   self.idCounter = Math.floor(Math.random() * self.options.max);
   self.setProvider = function (provider) {
     if (typeof provider !== 'object') {
-      throw new Error('[ethjs-rpc] the EthRPC object requires that the first input \'provider\' must be an object, got \'' + typeof provider + '\' (i.e. \'const eth = new EthRPC(provider);\')');
+      throw new Error('[vapjs-rpc] the VapRPC object requires that the first input \'provider\' must be an object, got \'' + typeof provider + '\' (i.e. \'const vap = new VapRPC(provider);\')');
     }
 
     self.currentProvider = provider;
@@ -222,7 +222,7 @@ function EthRPC(cprovider, options) {
  * @param {Function} cb the async standard callback
  * @callback {Object|Array|Boolean|String} vary result instance output
  */
-EthRPC.prototype.sendAsync = function sendAsync(payload, callback) {
+VapRPC.prototype.sendAsync = function sendAsync(payload, callback) {
   var self = this;
   self.idCounter = self.idCounter % self.options.max;
   var parsedPayload = createPayload(payload, self.idCounter++);
@@ -232,7 +232,7 @@ EthRPC.prototype.sendAsync = function sendAsync(payload, callback) {
       var responseObject = response || {};
 
       if (err || responseObject.error) {
-        var payloadErrorMessage = '[ethjs-rpc] ' + (responseObject.error && 'rpc' || '') + ' error with payload ' + JSON.stringify(parsedPayload, null, self.options.jsonSpace) + ' ' + (err ? String(err) : JSON.stringify(responseObject.error, null, self.options.jsonSpace));
+        var payloadErrorMessage = '[vapjs-rpc] ' + (responseObject.error && 'rpc' || '') + ' error with payload ' + JSON.stringify(parsedPayload, null, self.options.jsonSpace) + ' ' + (err ? String(err) : JSON.stringify(responseObject.error, null, self.options.jsonSpace));
         var payloadError = new Error(payloadErrorMessage);
         payloadError.value = err || responseObject.error;
         reject(payloadError);
@@ -491,4 +491,4 @@ process.umask = function() { return 0; };
 /******/ ])
 });
 ;
-//# sourceMappingURL=ethjs-rpc.js.map
+//# sourceMappingURL=vapjs-rpc.js.map

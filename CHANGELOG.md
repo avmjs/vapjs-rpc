@@ -8,7 +8,7 @@
 
 # 0.1.6 -- fix RPC error handling
 
-1. fix RPC error handling for geth nodes
+1. fix RPC error handling for gvap nodes
 
 # 0.1.5 -- package json fix
 
@@ -24,7 +24,7 @@
 
 1. Better error handling
 
-# 0.1.0 -- ethjs-rpc
+# 0.1.0 -- vapjs-rpc
 
 1. Basic testing
 2. Basic docs

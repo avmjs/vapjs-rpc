@@ -1,8 +1,8 @@
 var webpack = require('webpack'); // eslint-disable-line
 
 var env = process.env.NODE_ENV;   // eslint-disable-line
-var filename = 'ethjs-rpc';     // eslint-disable-line
-var library = 'EthRPC';              // eslint-disable-line
+var filename = 'vapjs-rpc';     // eslint-disable-line
+var library = 'VapRPC';              // eslint-disable-line
 var config = {                    // eslint-disable-line
   module: {
     loaders: [

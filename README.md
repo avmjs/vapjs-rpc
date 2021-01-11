@@ -1,32 +1,32 @@
-## ethjs-rpc
+## vapjs-rpc
 
 <div>
   <!-- Dependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-rpc">
-    <img src="https://david-dm.org/ethjs/ethjs-rpc.svg"
+  <a href="https://david-dm.org/vapjs/vapjs-rpc">
+    <img src="https://david-dm.org/vapjs/vapjs-rpc.svg"
     alt="Dependency Status" />
   </a>
 
   <!-- devDependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-rpc#info=devDependencies">
-    <img src="https://david-dm.org/ethjs/ethjs-rpc/dev-status.svg" alt="devDependency Status" />
+  <a href="https://david-dm.org/vapjs/vapjs-rpc#info=devDependencies">
+    <img src="https://david-dm.org/vapjs/vapjs-rpc/dev-status.svg" alt="devDependency Status" />
   </a>
 
   <!-- Build Status -->
-  <a href="https://travis-ci.org/ethjs/ethjs-rpc">
-    <img src="https://travis-ci.org/ethjs/ethjs-rpc.svg"
+  <a href="https://travis-ci.org/vapjs/vapjs-rpc">
+    <img src="https://travis-ci.org/vapjs/vapjs-rpc.svg"
     alt="Build Status" />
   </a>
 
   <!-- NPM Version -->
-  <a href="https://www.npmjs.org/package/ethjs-rpc">
-    <img src="http://img.shields.io/npm/v/ethjs-rpc.svg"
+  <a href="https://www.npmjs.org/package/vapjs-rpc">
+    <img src="http://img.shields.io/npm/v/vapjs-rpc.svg"
     alt="NPM version" />
   </a>
 
   <!-- Test Coverage -->
-  <a href="https://coveralls.io/r/ethjs/ethjs-rpc">
-    <img src="https://coveralls.io/repos/github/ethjs/ethjs-rpc/badge.svg" alt="Test Coverage" />
+  <a href="https://coveralls.io/r/vapjs/vapjs-rpc">
+    <img src="https://coveralls.io/repos/github/vapjs/vapjs-rpc/badge.svg" alt="Test Coverage" />
   </a>
 
   <!-- Javascript Style -->
@@ -37,36 +37,36 @@
 
 <br />
 
-A super simple module for querying the Ethereum RPC layer without formatting.
+A super simple module for querying the Vapory RPC layer without formatting.
 
-This module was influenced by: [`eth-query`](https://github.com/ethereumjs/eth-query).
+This module was influenced by: [`vap-query`](https://github.com/vaporycojs/vap-query).
 
 ## Install
 
 ```
-npm install --save ethjs-rpc
+npm install --save vapjs-rpc
 ```
 
 ## Usage
 
 ```js
-const HttpProvider = require('ethjs-provider-http');
-const EthRPC = require('ethjs-rpc');
-const eth = new EthRPC(new HttpProvider('http://localhost:8545'));
+const HttpProvider = require('vapjs-provider-http');
+const VapRPC = require('vapjs-rpc');
+const vap = new VapRPC(new HttpProvider('http://localhost:8545'));
 
 // accounts
-eth.sendAsync({ method: 'eth_accounts' }, (err, accounts1) => {
+vap.sendAsync({ method: 'vap_accounts' }, (err, accounts1) => {
   // null ['0x...', '0x....']
 });
 
 // gasPrice
-eth.sendAsync({ method: 'eth_gasPrice' }, (err, gasPrice) => {
+vap.sendAsync({ method: 'vap_gasPrice' }, (err, gasPrice) => {
   // null '0xe83922'
 });
 
 // getBalance
-eth.sendAsync({
-  method: 'eth_getBalance',
+vap.sendAsync({
+  method: 'vap_getBalance',
   params: ['0x5c517fffeacc03caaa8f0aa5722168b9ab3fb7a1', 'latest'],
 }, (err, gasPrice) => {
   // null '0x5483de922'
@@ -75,40 +75,40 @@ eth.sendAsync({
 
 ## About
 
-This simple module allows you to query the Ethereum RPC layer at a very low level. You must specify your data payload method and params, if any. The module will handle payload RPC ids.
+This simple module allows you to query the Vapory RPC layer at a very low level. You must specify your data payload method and params, if any. The module will handle payload RPC ids.
 
 ## Contributing
 
-Please help better the ecosystem by submitting issues and pull requests to `ethjs-rpc`. We need all the help we can get to build the absolute best linting standards and utilities. We follow the AirBNB linting standard and the unix philosophy.
+Please help better the ecosystem by submitting issues and pull requests to `vapjs-rpc`. We need all the help we can get to build the absolute best linting standards and utilities. We follow the AirBNB linting standard and the unix philosophy.
 
 ## Guides
 
-You'll find more detailed information on using `ethjs-rpc` and tailoring it to your needs in our guides:
+You'll find more detailed information on using `vapjs-rpc` and tailoring it to your needs in our guides:
 
 - [User guide](docs/user-guide.md) - Usage, configuration, FAQ and complementary tools.
-- [Developer guide](docs/developer-guide.md) - Contributing to `ethjs-rpc` and writing your own code and coverage.
+- [Developer guide](docs/developer-guide.md) - Contributing to `vapjs-rpc` and writing your own code and coverage.
 
 ## Help out
 
 There is always a lot of work to do, and will have many rules to maintain. So please help out in any way that you can:
 
-- Create, enhance, and debug ethjs rules (see our guide to ["Working on rules"](./github/CONTRIBUTING.md)).
+- Create, enhance, and debug vapjs rules (see our guide to ["Working on rules"](./github/CONTRIBUTING.md)).
 - Improve documentation.
 - Chime in on any open issue or pull request.
-- Open new issues about your ideas for making `ethjs-rpc` better, and pull requests to show us how your idea works.
+- Open new issues about your ideas for making `vapjs-rpc` better, and pull requests to show us how your idea works.
 - Add new tests to *absolutely anything*.
 - Create or contribute to ecosystem tools, like modules for encoding or contracts.
 - Spread the word.
 
 Please consult our [Code of Conduct](CODE_OF_CONDUCT.md) docs before helping out.
 
-We communicate via [issues](https://github.com/ethjs/ethjs-rpc/issues) and [pull requests](https://github.com/ethjs/ethjs-rpc/pulls).
+We communicate via [issues](https://github.com/vapjs/vapjs-rpc/issues) and [pull requests](https://github.com/vapjs/vapjs-rpc/pulls).
 
 ## Important documents
 
 - [Changelog](CHANGELOG.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
-- [License](https://raw.githubusercontent.com/ethjs/ethjs-rpc/master/LICENSE)
+- [License](https://raw.githubusercontent.com/vapjs/vapjs-rpc/master/LICENSE)
 
 ## Licence
 
