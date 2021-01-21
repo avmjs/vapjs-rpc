@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(5).nextTick;
+/* WEBPACK VAR INJECTION */(function(setImmediate, clearImmediate) {var nextTick = __webpack_require__(4).nextTick;
 var apply = Function.prototype.apply;
 var slice = Array.prototype.slice;
 var immediateIds = {};
@@ -155,7 +155,7 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
 "use strict";
 'use strict';
 var isFn = __webpack_require__(3);
-var setImmediate = __webpack_require__(4);
+var setImmediate = __webpack_require__(5);
 
 module.exports = function (promise) {
 	if (!isFn(promise.then)) {
@@ -284,21 +284,6 @@ module.exports = function (x) {
 
 /***/ },
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(setImmediate) {'use strict';
-module.exports = typeof setImmediate === 'function' ? setImmediate :
-	function setImmediate() {
-		var args = [].slice.apply(arguments);
-		args.splice(1, 0, 0);
-		setTimeout.apply(null, args);
-	};
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).setImmediate))
-
-/***/ },
-/* 5 */
 /***/ function(module, exports) {
 
 // shim for using process in browser
@@ -486,6 +471,21 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(setImmediate) {'use strict';
+module.exports = typeof setImmediate === 'function' ? setImmediate :
+	function setImmediate() {
+		var args = [].slice.apply(arguments);
+		args.splice(1, 0, 0);
+		setTimeout.apply(null, args);
+	};
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).setImmediate))
 
 /***/ }
 /******/ ])
