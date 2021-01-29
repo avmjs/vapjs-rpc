@@ -1,7 +1,7 @@
 {
   "name": "vapjs-rpc",
   "namespace": "vapjs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A super simple module for querying the Vapory RPC layer without formatting.",
   "main": "lib/index.js",
   "files": [
@@ -158,7 +158,7 @@
     "eslint-plugin-import": "1.8.0",
     "eslint-plugin-jsx-a11y": "1.2.0",
     "eslint-plugin-react": "5.1.1",
-    "vaporyjs-testrpc": "3.0.1",
+    "vaporyjs-testrpc": "3.0.2",
     "vapjs-abi": "0.0.1",
     "vapjs-format": "0.1.8",
     "vapjs-provider-http": "0.1.4",
